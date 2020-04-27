@@ -16,4 +16,5 @@ From: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
     # which are useless now.
     rm -rf /var/lib/apt/lists/*
     # Install Python modules.
+    pip3 install -U wheel --user
     pip3 install numpy torch==1.4.0 matplotlib tensorboard torchvision
