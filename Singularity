@@ -1,6 +1,5 @@
 Bootstrap: docker
-From: nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
-#From: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+From: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
 
 %post
     # Downloads the latest package lists (important).
@@ -16,4 +15,4 @@ From: nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
     # which are useless now.
     rm -rf /var/lib/apt/lists/*
     # Install Python modules.
-    pip3 install setuptools numpy torch==1.4.0 matplotlib tensorboard torchvision
+    pip3 install python3-setuptools numpy torch==1.4.0 matplotlib tensorboard torchvision
