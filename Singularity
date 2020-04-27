@@ -10,9 +10,10 @@ From: nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         python3 \
         python3-tk \
-        python3-pip
+        python3-pip \
+        python3-setuptools
     # Reduce the size of the image by deleting the package lists we downloaded,
     # which are useless now.
     rm -rf /var/lib/apt/lists/*
     # Install Python modules.
-    pip3 install python3-setuptools numpy torch==1.4.0 matplotlib tensorboard torchvision
+    pip3 install numpy torch==1.4.0 matplotlib tensorboard torchvision
